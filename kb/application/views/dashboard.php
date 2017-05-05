@@ -40,18 +40,6 @@
 									Hewan
 								</a>
 							</li>
-							<!--<li>
-								<a href="<?php echo base_url('index.php/Pages/view_mhs') ?>">
-									<i class="menu-icon icon-table"></i>
-									Data Hewan
-								</a>
-							</li>-->
-							<!--<li>
-								<a href="<?php echo base_url('index.php/Pages/tamb_sek') ?>">
-									<i class="menu-icon icon-folder-close"></i>
-									Tambah Sektor
-								</a>
-							</li>-->
 							<li>
 								<a href="<?php echo base_url('index.php/sektor/view') ?>">
 									<i class="menu-icon icon-folder-close"></i>
