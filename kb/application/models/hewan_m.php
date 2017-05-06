@@ -18,11 +18,18 @@
 		}
 		
 		public function delete_hwn($kode){
-		$data = array (
-			'id_hewan' => $kode	
-		);
-		$remsek = $this->db->delete('hewan', $data);
-		return $remsek;
-	}
-	}
+			$data = array (
+				'id_hewan' => $kode	
+			);
+			$remsek = $this->db->delete('hewan', $data);
+			return $remsek;
+		}
+		
+		function edit_hwn($value ,$where)
+		{
+			$this->db->where($where);
+			$even = $this->db->update('hewan',$value);
+			return $even;
+		} 
+}
 ?>
