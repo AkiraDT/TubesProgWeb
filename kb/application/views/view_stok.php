@@ -74,16 +74,16 @@
 											</tr>
 											<?php 
 												$no = 1;
-												foreach($makan as $mkn){
+												foreach($datas as $stok){
 											?>
 											<tr>
 												<td><?php echo $no; ?></td>
-												<td><?php echo $mkn->nama_makanan?></td>
-												<td><?php echo $mkn->tipe_makanan ?></td>
-												<td><?php echo $mkn->jumlah_makanan ?></td>
+												<td><?php echo $stok->nama_makanan?></td>
+												<td><?php echo $stok->tipe_makanan ?></td>
+												<td><?php echo $stok->jumlah_makanan ?></td>
 												<td align="center">
-													<a href="<?php echo base_url('index.php/stok/delete_stok/'.$mkn->kd_makanan)?>" class="btn btn-danger">Delete</a>
-													<a href="<?php echo base_url('index.php/stok/edit_stok/'.$mkn->kd_makanan)?>" class="btn btn-primary">Edit</a>
+													<a href="<?php echo base_url('index.php/stok/delete_stok/'.$stok->kd_makanan)?>" class="btn btn-danger">Delete</a>
+													<a href="<?php echo base_url('index.php/stok/edit_stok/'.$stok->kd_makanan)?>" class="btn btn-primary">Edit</a>
 												</td>
 											</tr>
 											<?php $no++; } ?>
