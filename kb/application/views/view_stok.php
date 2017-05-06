@@ -35,15 +35,39 @@
 
 						<ul class="widget widget-menu unstyled">
 							<li class="active">
+								<a href="<?php echo base_url('index.php/hewan/view') ?>">
+									<i class="menu-icon icon-folder-close"></i>
+									Hewan
+								</a>
+							</li>
+							<li>
 								<a href="<?php echo base_url('index.php/sektor/view') ?>">
 									<i class="menu-icon icon-folder-close"></i>
 									Sektor
 								</a>
 							</li>
 							<li>
-								<a href="<?php echo base_url('index.php/Pages/view_mhs') ?>">
+								<a href="<?php echo base_url('index.php/stok/view') ?>">
+									<i class="menu-icon icon-folder-close"></i>
+									Stok Makanan
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url('index.php/fasilitas/view') ?>">
+									<i class="menu-icon icon-folder-close"></i>
+									Fasilitas
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url('index.php/kandang/view') ?>">
+									<i class="menu-icon icon-folder-close"></i>
+									Kandang
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url('index.php/login/logoutAdmin') ?>">
 									<i class="menu-icon icon-table"></i>
-									Data hewan
+									Logout
 								</a>
 							</li>
 						</ul><!--/.widget-nav-->
@@ -73,8 +97,9 @@
 												<th>Sisa Stok</th>
 											</tr>
 											<?php 
+												$sum = 0;
 												$no = 1;
-												foreach($datas as $stok){
+												foreach($stok_makanan as $stok){
 											?>
 											<tr>
 												<td><?php echo $no; ?></td>
@@ -86,7 +111,15 @@
 													<a href="<?php echo base_url('index.php/stok/edit_stok/'.$stok->kd_makanan)?>" class="btn btn-primary">Edit</a>
 												</td>
 											</tr>
-											<?php $no++; } ?>
+											<?php 
+												$sum += $stok->jumlah_makanan;
+												$no++; } ?>
+											<tr>
+												<th></th>
+												<th></th>
+												<th>Total Stok</th>
+												<th><?php echo $sum ?></th>
+											</tr>
 										</table>
 										
 									</div>

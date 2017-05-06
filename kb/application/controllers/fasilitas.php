@@ -12,7 +12,7 @@
 		
 		public function view()
 		{
-			$data = $this->fasilitas_m->view();
+			$data ['fasili'] = $this->fasilitas_m->view();
 			$this->load->view('view_fas',$data);
 		}
 		

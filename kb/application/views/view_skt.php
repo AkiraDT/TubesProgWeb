@@ -35,15 +35,39 @@
 
 						<ul class="widget widget-menu unstyled">
 							<li class="active">
-								<a href="<?php echo base_url('index.php/Pages/view_sek') ?>">
+								<a href="<?php echo base_url('index.php/hewan/view') ?>">
+									<i class="menu-icon icon-folder-close"></i>
+									Hewan
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url('index.php/sektor/view') ?>">
 									<i class="menu-icon icon-folder-close"></i>
 									Sektor
 								</a>
 							</li>
 							<li>
-								<a href="<?php echo base_url('index.php/Pages/view_mhs') ?>">
+								<a href="<?php echo base_url('index.php/stok/view') ?>">
+									<i class="menu-icon icon-folder-close"></i>
+									Stok Makanan
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url('index.php/fasilitas/view') ?>">
+									<i class="menu-icon icon-folder-close"></i>
+									Fasilitas
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url('index.php/kandang/view') ?>">
+									<i class="menu-icon icon-folder-close"></i>
+									Kandang
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url('index.php/login/logoutAdmin') ?>">
 									<i class="menu-icon icon-table"></i>
-									Data hewan
+									Logout
 								</a>
 							</li>
 						</ul><!--/.widget-nav-->
