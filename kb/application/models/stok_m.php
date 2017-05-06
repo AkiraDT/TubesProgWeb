@@ -18,11 +18,18 @@
 		}
 		
 		public function delete_mkn($kode){
-		$data = array (
-			'kd_makanan' => $kode	
-		);
-		$remsek = $this->db->delete('stok_makanan', $data);
-		return $remsek;
-	}
+			$data = array (
+				'kd_makanan' => $kode	
+			);
+			$remsek = $this->db->delete('stok_makanan', $data);
+			return $remsek;
+		}
+		
+		public function countData(){
+			$this->db->select('sum(jumlah_makanan)');
+			$this->db->from('stok_makanan');
+			$data = $this->db->get();
+			return $data->result();
+		}
 	}
 ?>
