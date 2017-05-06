@@ -57,4 +57,34 @@
 			}
 		}
 		
+		public function edit_hwn($kode)
+		{
+			$data['kode'] = $kode;
+			$this->load->view('edit_hwn',$data);
+		}
+		
+		public function update_hwn($kode)
+		{
+			$nama_h = $this->input->post('namhewan');
+			$spesies = $this->input->post('speshewan');
+			$kelamin = $this->input->post('kelhewan');
+			$umur = $this->input->post('umhewan');
+			$kodeHabitat = $this->input->post('kodhabitat');
+			$where['id_hewan'] = $kode;
+			$value = array(
+				'nama_hewan' => $nama_h,
+				'spesies_hewan' => $spesies,
+				'jk_hewan' => $kelamin,
+				'umur_hewan' => $umur,
+				'id_habitat' => $kodeHabitat
+			);
+			$update = $this->hewan_m->edit_hwn($value,$where);
+			if($update){
+				redirect('hewan/view');
+			}
+			else{
+				echo "gagal";
+			}
+		}
+		
 	}
