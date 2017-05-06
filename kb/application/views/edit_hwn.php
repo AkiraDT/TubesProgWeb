@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hewan</title>
+	<title>Kebun Binatang</title>
 	<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap-responsive.min.css') ?>" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url('files/css/theme.css') ?>" rel="stylesheet">
@@ -19,7 +19,7 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="<?php echo base_url('index.php/login/utama') ?>"> Kebun Binatang </a>
+			  	<a class="brand" href="<?php echo base_url('index.php/login/loginAdmin') ?>"> Kebun Binatang </a>
 
 			</div>
 		</div><!-- /navbar-inner -->
@@ -77,43 +77,49 @@
 
 				<div class="span9">
 					<div class="content">
+					
 						<div class="module">
 							<div class="module-head">
-								<h3>Data Hewan</h3>
+								<h3>Tambahkan Data Hewan</h3>
 							</div>
 							<div class="module-body">
 								<div class="stream-composer media">
 									<div class="media-body">
-										<form class="form-horizontal" method="post" action="<?php echo base_url().'index.php/sektor/utama';?>">
+										<?php echo form_open('hewan/update_hwn/').$kode ?>
 											<div class="group-input">
-												<input class="btn btn-primary" type="submit" name="submit" value="Tambah Data"/>
+												<label>Kode Hewan</label>
+												<input class="form-control" type="text" name="khewan" value = "<?php echo $kode; ?>" disabled></input>
 											</div>
 											<br>
-										<table class="table">
-											<tr>
-												<th>NO</th>
-												<th>NAMA SEKTOR</th>
-												<th>Koordinat X</th>
-												<th>Koordinat Y</th>
-												
-											</tr>
-											<?php 
-												$no = 1;
-												foreach($sektor as $skt){
-											?>
-											<tr>
-												<td><?php echo $no; ?></td>
-												<td><?php echo $skt->nama_sektor?></td>
-												<td><?php echo $skt->koordinatx_sektor ?></td>
-												<td><?php echo $skt->koordinaty_sektor ?></td>
-												<td align="center">
-													<a href="<?php echo base_url('index.php/sektor/delete_sektor/'.$skt->kd_sektor)?>" class="btn btn-danger">Delete</a>
-													<a href="<?php echo base_url('index.php/sektor/edit_hewan/'.$skt->kd_sektor)?>" class="btn btn-primary">Edit</a>
-												</td>
-											</tr>
-											<?php $no++; } ?>
-										</table>
-										
+											<div class="group-input">
+												<label>Nama Hewan</label>
+												<input class="form-control" type="text" name="namhewan" />
+											</div>
+											<br>
+											<div class="group-input">
+												<label>Spesies Hewan</label>
+												<input class="form-control" type="text" name="speshewan" />
+											</div>
+											<br>
+											<div class="group-input">
+												<label>Jenis Kelamin Hewan</label>
+												<input class="form-control" type="text" name="kelhewan" />
+											</div>
+											<br>
+											<div class="group-input">
+												<label>Umur Hewan</label>
+												<input class="form-control" type="text" name="umhewan" />
+											</div>
+											<br>
+											<div class="group-input">
+												<label>Kode Habitat</label>
+												<input class="form-control" type="text" name="kodhabitat" />
+											</div>
+											<br>
+											<div class="group-input">
+												<input class="btn btn-primary" type="submit" name="submit" value="Simpan Data"/>
+											</div>
+										<?php echo form_close() ?>				
 									</div>
 								</div>
 								

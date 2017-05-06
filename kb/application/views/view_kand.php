@@ -84,11 +84,6 @@
 							<div class="module-body">
 								<div class="stream-composer media">
 									<div class="media-body">
-										<form class="form-horizontal" method="post" action="<?php echo base_url().'index.php/hewan/utama';?>">
-											<div class="group-input">
-												<input class="btn btn-primary" type="submit" name="submit" value="Tambah Data"/>
-											</div>
-											<br>
 										<table class="table">
 											<tr>
 												<th>NO</th>
@@ -103,10 +98,7 @@
 												<td><?php echo $no; ?></td>
 												<td><?php echo $kand->tipe_kandang ?></td>
 												<td><?php echo $kand->nama_kandang ?></td>
-												<td align="center">
-													<a href="<?php echo base_url('index.php/kandang/delete_kandang/'.$kand->kd_kandang)?>" class="btn btn-danger">Delete</a>
-													<a href="<?php echo base_url('index.php/kandang/edit_kandang/'.$kand->kd_kandang)?>" class="btn btn-primary">Edit</a>
-												</td>
+												
 											</tr>
 											<?php $no++; } ?>
 										</table>	

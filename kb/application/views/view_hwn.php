@@ -111,7 +111,7 @@
 												<td><?php echo $hwn->umur_hewan?></td>
 												<td align="center">
 													<a href="<?php echo base_url('index.php/hewan/delete_hewan/'.$hwn->id_hewan)?>" class="btn btn-danger">Delete</a>
-													<a href="<?php echo base_url('index.php/hewan/edit_hewan/'.$hwn->id_hewan)?>" class="btn btn-primary">Edit</a>
+													<a href="<?php echo base_url('index.php/hewan/edit_hwn/'.$hwn->id_hewan)?>" class="btn btn-primary">Edit</a>
 												</td>
 											</tr>
 											<?php $no++; } ?>
