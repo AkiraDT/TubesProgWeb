@@ -79,7 +79,7 @@
 					<div class="content">
 						<div class="module">
 							<div class="module-head">
-								<h3>Data Hewan</h3>
+								<h3>Data Sektor</h3>
 							</div>
 							<div class="module-body">
 								<div class="stream-composer media">
