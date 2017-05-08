@@ -1,9 +1,11 @@
 ###################
-ZooMS
+T4GS
 ###################
 
-ZooMS merupakan aplikasi peta mobile untuk kebun binatang
+-Gigih Pandega Hanuranto 	padegagigih@gmail.com
+-Dennis Indrawan	dennisindra22@gail.com
+-Fahmi Taufikhul Hakim	fahmith07@gmail.com
 
--Gigih Pandega Hanuranto
--Dennis Indrawan
--Fahmi Taufikhul Hakim
+merupakan website admin database kebun binatang, yang didalamnya kita bisa melakukan pengolahan data
+
+
